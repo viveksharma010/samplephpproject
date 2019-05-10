@@ -27,7 +27,8 @@ stage("Create new tag") {
                 {
                 script {
                    
-                        def tag = sh(returnStdout: true, script: "git tag | tail -1").trim()
+                        def tag = sh(returnStdout: true, script: "git tag").trim()
+//                      def tag = sh(returnStdout: true, script: "git tag | tail -1").trim()
                         println tag
 //                        def semVerLib = load 'SemVer.groovy'
 //                        def version = semVerLib.getTagversion(tag)
